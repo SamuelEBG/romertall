@@ -7,7 +7,7 @@ class romertallTest {
 
     @Test
     void test(){
-        assertEquals("MD", toRoman(1500));
+        assertEquals("MDCC", toRoman(1700));
     }
 
     private String toRoman(int number) {
@@ -16,6 +16,11 @@ class romertallTest {
         String result = "";
 
         do {
+            if(num < 500 && num >= 100){
+                num -= 100;
+                result += "C";
+            }
+
             if (num < 1000 && num >= 500){
                 num -= 500;
                 result += "D";
