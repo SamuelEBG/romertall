@@ -69,7 +69,7 @@ class romertallTest {
         String result = "";
 
         do {
-
+            
                 if (num == 4){
                     num -= 4;
                     result += "IV";
@@ -79,7 +79,7 @@ class romertallTest {
                     num -= 9;
                     result += "IX";
                 }
-
+                
 
 
             if(num < 5 && num >0 ){
@@ -91,22 +91,22 @@ class romertallTest {
                 num -= 5;
                 result += "V";
             }
-
+            
             if (num == 40){
                 num -= 40;
                 result += "XL";
             }
-
+            
             if(num < 50 && num >= 10){
                 num -= 10;
                 result += "X";
             }
-
+            
             if (num == 90){
                 num -= 90;
                 result += "XC";
             }
-
+            
             if(num < 100 && num >=50){
                 num -= 50;
                 result += "L";
@@ -116,12 +116,12 @@ class romertallTest {
                 num -= 400;
                 result += "CD";
             }
-
+            
             if(num < 500 && num >= 100){
                 num -= 100;
                 result += "C";
             }
-
+            
             if (num == 900){
                 num -= 900;
                 result += "CM";
