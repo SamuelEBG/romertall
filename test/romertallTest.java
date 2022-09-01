@@ -7,7 +7,7 @@ class romertallTest {
 
     @Test
     void test(){
-        assertEquals("MDCCL", toRoman(1750));
+        assertEquals("MDCCLXVII", toRoman(1767));
     }
 
     @Test
@@ -18,7 +18,7 @@ class romertallTest {
 
     @Test
     void testNumberZero(){
-        assertEquals("Not a Roman umber!", toRoman(0));
+        assertEquals("Not a Roman number!", toRoman(0));
         assertEquals("Not a Roman number!", toRoman(0000));
     }
 
@@ -33,6 +33,21 @@ class romertallTest {
         String result = "";
 
         do {
+
+            if(num < 5){
+                num -= 1;
+                result += "I";
+            }
+
+            if(num < 10 && num >= 5){
+                num -= 5;
+                result += "V";
+            }
+
+            if(num < 50 && num >= 10){
+                num -= 10;
+                result += "X";
+            }
 
             if(num < 100 && num >=50){
                 num -= 50;
@@ -57,6 +72,7 @@ class romertallTest {
             }
 
         } while (num > 0);
+
         return result;
     }
 }
