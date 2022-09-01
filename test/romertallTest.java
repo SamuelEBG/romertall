@@ -33,12 +33,17 @@ class romertallTest {
 
     @Test
     void testNumber49(){
-        assertEquals("IL",toRoman(49));
+        assertEquals("XLIX",toRoman(49));
     }
 
     @Test
     void testNumber1999(){
         assertEquals("MCMXCIX",toRoman(1999));
+    }
+
+    @Test
+    void testNumber1767(){
+        assertEquals("MDCCLXVII",toRoman(1767));
     }
 
     @Test
@@ -65,22 +70,16 @@ class romertallTest {
 
         do {
 
+                if (num == 4){
+                    num -= 4;
+                    result += "IV";
+                }
 
+                if (num == 9){
+                    num -= 9;
+                    result += "IX";
+                }
 
-            if (num == 4){
-                num -= 4;
-                result += "IV";
-            }
-
-            if (num == 9){
-                num -= 9;
-                result += "IX";
-            }
-
-            if (num == 40){
-                num -= 40;
-                result += "XL";
-            }
 
 
             if(num < 5 && num >0 ){
@@ -93,9 +92,19 @@ class romertallTest {
                 result += "V";
             }
 
+            if (num == 40){
+                num -= 40;
+                result += "XL";
+            }
+
             if(num < 50 && num >= 10){
                 num -= 10;
                 result += "X";
+            }
+
+            if (num == 90){
+                num -= 90;
+                result += "XC";
             }
 
             if(num < 100 && num >=50){
@@ -103,12 +112,21 @@ class romertallTest {
                 result += "L";
             }
 
+            if (num == 400){
+                num -= 400;
+                result += "CD";
+            }
 
             if(num < 500 && num >= 100){
                 num -= 100;
                 result += "C";
             }
 
+            if (num == 900){
+                num -= 900;
+                result += "CM";
+            }
+            
             if (num < 1000 && num >= 500){
                 num -= 500;
                 result += "D";
