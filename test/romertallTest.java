@@ -10,7 +10,24 @@ class romertallTest {
         assertEquals("MDCCL", toRoman(1750));
     }
 
+    @Test
+    void testNegativeNumber(){
+        assertEquals("Not a Roman number!", toRoman(-1));
+        assertEquals("Not a Roman number!", toRoman(-9999));
+    }
+
+    @Test
+    void testNumberZero(){
+        assertEquals("Not a Roman umber!", toRoman(0));
+        assertEquals("Not a Roman number!", toRoman(0000));
+    }
+
     private String toRoman(int number) {
+
+
+        if((number == 0) || (number < 0)){
+            return "Not a Roman number!";
+        }
 
         int num = number;
         String result = "";
@@ -40,6 +57,6 @@ class romertallTest {
             }
 
         } while (num > 0);
-            return result;
+        return result;
     }
 }
