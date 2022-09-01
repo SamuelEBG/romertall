@@ -11,6 +11,11 @@ class romertallTest {
     }
 
     @Test
+    void testNumberFour(){
+        assertEquals("IV",toRoman(4));
+    }
+
+    @Test
     void testNegativeNumber(){
         assertEquals("Not a Roman number!", toRoman(-1));
         assertEquals("Not a Roman number!", toRoman(-9999));
@@ -33,6 +38,11 @@ class romertallTest {
         String result = "";
 
         do {
+
+            if (num == 4){
+                num -= 4;
+                result += "IV";
+            }
 
             if(num < 5){
                 num -= 1;
