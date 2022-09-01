@@ -15,6 +15,32 @@ class romertallTest {
         assertEquals("IV",toRoman(4));
     }
 
+
+    @Test
+    void testNumberNine(){
+        assertEquals("XI",toRoman(9));
+    }
+
+    @Test
+    void testNumberNineteen(){
+        assertEquals("XIX",toRoman(19));
+    }
+
+    @Test
+    void testNumber40(){
+        assertEquals("XL",toRoman(40));
+    }
+
+    @Test
+    void testNumber49(){
+        assertEquals("IL",toRoman(49));
+    }
+
+    @Test
+    void testNumber1999(){
+        assertEquals("MCMXCIX",toRoman(1999));
+    }
+
     @Test
     void testNegativeNumber(){
         assertEquals("Not a Roman number!", toRoman(-1));
@@ -39,12 +65,25 @@ class romertallTest {
 
         do {
 
+
+
             if (num == 4){
                 num -= 4;
                 result += "IV";
             }
 
-            if(num < 5){
+            if (num == 9){
+                num -= 9;
+                result += "IX";
+            }
+
+            if (num == 40){
+                num -= 40;
+                result += "XL";
+            }
+
+
+            if(num < 5 && num >0 ){
                 num -= 1;
                 result += "I";
             }
