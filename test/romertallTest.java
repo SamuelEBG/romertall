@@ -7,7 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class romertallTest {
 
     @Test
-    boolean test(){
-        assertTrue(test());
+    void test(){
+        assertEquals("i", toRoman(1));
+    }
+
+    private String toRoman(int i) {
+        return null;
     }
 }
